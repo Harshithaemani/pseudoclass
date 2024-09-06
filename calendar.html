@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        /* background image properties */
+        body{
+            background-image: url(https://m.media-amazon.com/images/I/91Oe9Hr7VoL._AC_UF1000,1000_QL80_.jpg);
+            background-size: cover;
+            height: 50em;
+            background-position: center;
+        }
+        /* table alignment */
+        table{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        /* heading style */
+        h1{
+            text-align: center;
+            color: rgb(118, 11, 11);
+            text-shadow: 2px 2px rgb(35, 194, 104);
+            font-size: 3em;
+        }
+        /* table content styling */
+        td{
+            border-radius: 20px;
+            font-size: 1.5em;
+            font-weight: 1000;
+        }
+        /* blur effect for table cells */
+        td{
+            backdrop-filter: blur(20px);
+            box-shadow: 0px 0px 50px rgba(227, 228, 237, 0.37);
+            border: 3px solid rgba(4, 120, 17, 0.668);
+        }
+        /* cell hover styling */
+        td:hover{
+            background-color: rgb(232, 148, 22);
+        }
+        /* sunday editing using position and content overflow for the ribbon */
+        .calender tr td{
+            position: relative;
+            overflow: hidden;
+        }
+        /* ribbon styling */
+        .calender tr :after {
+            content: attr(data-ribbon);
+            position: absolute;
+            width: 75px;
+            height: 55px;
+            color: white;
+            top: 0px;
+            text-align: center ;
+            line-height: 70px;
+            left:85px;
+            border-radius: 25px;
+            transform: rotate(50deg);
+            box-shadow: 0 2px 4px 0 rgba(192, 8, 220, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+        /* ribbon styling for Tuesday */
+        .r1:after {
+            background-color: rgb(221, 101, 185);
+        }
+        /* ribbon styling for wednesday */
+        .r2:after {
+            background: rgb(119, 70, 120);
+        }
+        /* ribbon styling for Thursday */
+        .r3:after {
+            background: rgb(144, 100, 197);
+        }
+        /* ribbon styling for friday */
+        .r4:after {
+            background: rgb(178, 43, 115);
+        }
+        /* ribbon styling for saturday */
+        .r5:after {
+            background: rgba(228, 76, 76, 0.805);
+        }
+        /* ribbon styling for sunday */
+        .r6:after {
+            background: rgb(180, 30, 30);
+        }        
+        /* ribbon styling for monday */
+        .r7:after {
+            background: rgb(109, 161, 230);
+        }      
+    </style>
+</head>
+<body>
+    <h1>February - 2022</h1>
+    <table class="calender" cellpadding="60px" cellspacing="6px">
+        <!-- Row 1 -->
+        <tr>
+            <td style="visibility: hidden;"></td>
+            <td class="r1" data-ribbon="Tues">1</td>                
+            <td class="r2" data-ribbon="Wed">2</td>
+            <td class="r3" data-ribbon="Thurs">3</td>
+            <td class="r4" data-ribbon="Fri">4</td>
+            <td class="r5" data-ribbon="Satur">5</td>
+            <td class="r6" data-ribbon="sun">6</td>
+        </tr>
+        <!-- Row 2 -->
+        <tr>
+            <td class="r7" data-ribbon="Mon">7</td>
+            <td class="r1" data-ribbon="Tues">8</td>
+            <td class="r2" data-ribbon="Wed">9</td>
+            <td class="r3" data-ribbon="Thurs">10</td>
+            <td class="r4" data-ribbon="Fri">11</td>
+            <td class="r5" data-ribbon="Satur">12</td>
+            <td class="r6" data-ribbon="sun">13</td>
+        </tr>
+        <!-- Row 3 -->
+        <tr>
+            <td class="r7" data-ribbon="Mon">14</td>
+            <td class="r1" data-ribbon="Tues">15</td>
+            <td class="r2" data-ribbon="Wed">16</td>
+            <td class="r3" data-ribbon="Thurs">17</td>
+            <td class="r4" data-ribbon="Fri">18</td>
+            <td class="r5" data-ribbon="Satur">19</td>
+            <td class="r6" data-ribbon="sun">20</td>
+        </tr>
+        <!-- Row 4 -->
+        <tr>
+            <td class="r7" data-ribbon="Mon">21</td>
+            <td class="r1" data-ribbon="Tues">22</td>
+            <td class="r2" data-ribbon="Wed">23</td>
+            <td class="r3" data-ribbon="Thurs">24</td>
+            <td class="r4" data-ribbon="Fri">25</td>
+            <td class="r5" data-ribbon="Satur">26</td>
+            <td class="r6" data-ribbon="sun">27</td>
+        </tr>
+        <tr>
+            <td class="r7" data-ribbon="Mon">28</td>
+        </tr>
+    </table>
+</body>
+</html>
